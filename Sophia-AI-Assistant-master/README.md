@@ -1,11 +1,10 @@
 # Sophia AI Assistant
 Sophia is a desktop AI assistant built using Python that can perform various tasks such as answering questions like ChatGPT, opening desktop applications, browsing websites, and even making phone and WhatsApp calls. This project is designed to be versatile and extensible, with the ability to add more functionalities easily. It integrates the Hugging Face API, a free ChatGPT alternative to simulate conversation, and offers multiple activation methods for user commands.
 
-## Demo Video
-You can check out the demo by clicking on the below image
+## Demo
 
-[![Demo Video](https://github.com/user-attachments/assets/b54a65c4-1deb-40e1-b957-772285d14c54)](https://youtu.be/dgCYDETwjcs)
 
+## Schemantic Structure 
 
 ## Features
 
@@ -15,6 +14,27 @@ You can check out the demo by clicking on the below image
 * **Website Navigation:** Open websites like YouTube and Canva.
 * **Multimedia Control:** Search and play specific videos on YouTube.
 * **Phone and WhatsApp Communication:** Make calls or send messages.
+
+## Enabling Chat Responses (ChatGPT-like)
+
+This assistant can answer questions in a conversational way using the Hugging Face Inference API. To enable full ChatGPT-like responses:
+
+1. Get a Hugging Face API token from https://huggingface.co/settings/tokens and set it in your environment:
+
+   - Windows PowerShell:
+
+     ```powershell
+     $env:HF_API_TOKEN = "hf_xxx"
+     ```
+
+   - Or permanently via System Environment Variables.
+
+2. (Optional) Choose a model by setting `HF_MODEL` environment variable (default: `google/flan-t5-large`).
+
+3. Restart the app. Typed questions or voice queries that are not recognized as commands will be sent to the Hugging Face Inference API and Sophia will speak and display the response.
+
+If no token is provided, the assistant will show a message explaining how to enable chat responses.
+
 
 ## Technology Used:
 - #### Languages:
@@ -97,12 +117,11 @@ zope.interface==6.4.post2
 
 **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/sophia-ai-assistant.git
-   cd sophia-ai-assistant
+   git clone https://github.com/monika-117/sophia-AI.git
+   cd sophia-AI
 ```
-__To install the necessary dependencies and set up the API and database, I recommend checking out my YouTube tutorial series where I walk you through the entire process of building an AI assistant.__
+__To install the necessary dependencies and set up the API and database,please contact @monika-117__
 
-### 📺 [Watch the Full YouTube Tutorial Series](https://www.youtube.com/playlist?list=PLoGk-8pBKSRVWvGN372yBzrF15tSv22KY)
 
 ## Usage
 
@@ -119,29 +138,143 @@ There are several ways to activate Sophia:
 Ask Sophia questions, and she'll answer using the Hugging Face API, a free ChatGPT alternative.
 **Example:** "Tell me about yourself"
 
-#### Opening Applications
-- "Open Notepad"
-- "Open OneNote"
 
-#### Website Navigation
-- "Open YouTube"
-- "Open Canva"
+## Open Apps And Websites
 
-#### Multimedia Search
-- "Play the video of the 99 names of Allah on YouTube"
+```text
+open notepad
+open chrome
+open calculator
+open vscode
+open file manager
+open command prompt
+open youtube
+open github
+open instagram
+open facebook
+open canva
+open whatsapp
+open telegram
+```
 
-#### Phone and Messaging
-- "Sophia, make a phone call to Ali Hassan"
-- "Sophia, send a message to Ali Hassan"
-- "Sophia, make a video call on WhatsApp"
+## YouTube
 
-### Future Enhancements
-- **Custom Application and Website Management:** Users will be able to add their applications and websites without needing to work with databases or SQL.
-- **Expanded Application Support:** Add support for more desktop and web applications.
-- **Customizable Settings:** Implement user-configurable settings for a more personalized experience.
+```text
+play shape of you on youtube
+play python tutorial on youtube
+open youtube search for ai assistant project
+```
+
+## Wikipedia And Information
+
+```text
+who is Ada Lovelace
+what is artificial intelligence
+search Python programming
+wikipedia machine learning
+```
+
+## Conversational AI
+
+```text
+tell me a joke
+ask what is machine learning
+how does photosynthesis work
+why is the sky blue
+tell me about computers
+ask explain python in simple words
+```
+
+## Weather
+
+```text
+weather in Delhi
+weather in Mumbai
+weather forecast in Bangalore
+```
+
+## Reminders
+
+```text
+remind me to drink water at 6 pm
+remind me in 10 minutes to check the oven
+list reminders
+show reminders
+```
+
+## Contacts
+
+```text
+add contact username as 919999999999
+add contact rahul as 918888888888
+list contacts
+show contacts
+delete contact username 
+```
+
+## WhatsApp And Messaging
+
+```text
+send whatsapp message to +919999999999 hello
+send whatsapp message to user hello
+send telegram message to @username hello
+chat hello to @username
+```
+
+## Video Calls
+
+```text
+video call whatsapp to +919999999999
+video call whatsapp to @username 
+video call telegram to @username
+video call facebook to friend_name
+```
+
+Note: WhatsApp does not provide a direct public link that starts a video call. Sophia opens the chat and tries to click the video-call button automatically.
+
+## Face Recognition
+
+```text
+register my face
+recognize me
+face recognition
+```
+
+## Calendar
+
+```text
+calendar
+my events
+schedule
+```
+
+Calendar requires Google Calendar credentials. If it is not configured, Sophia will say Google Calendar is not configured.
+
+## API Keys
+
+Set API keys in PowerShell before running Sophia:
+
+```powershell
+$env:GOOGLE_API_KEY="your_gemini_key"
+$env:HF_API_TOKEN="your_huggingface_token"
+$env:OPENWEATHER_API_KEY="your_openweather_key"
+```
+
+Then run:
+
+```powershell
+..\envSophia\Scripts\python.exe main.py
+```
+
+
+Notes:
+- Phone numbers should include the country code when possible (e.g., `+123456789`).
+- Telegram usernames may be given with or without the `@` prefix.
+- Messaging and calling flows open the web clients (WhatsApp Web / Telegram Web / Messenger); you must be logged in to complete send/call actions.
+
+
 
 ## Contributing
 Feel free to open issues or submit pull requests to improve the project. Contributions are welcome, whether it’s adding new features, fixing bugs, or improving documentation.
 
-## Feedback
-If you have any suggestions or want to request additional features, leave a comment on the YouTube tutorial series. Your feedback is highly appreciated!
+
