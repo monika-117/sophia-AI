@@ -5,9 +5,6 @@ Sophia is a desktop AI assistant built using Python that can perform various tas
 ![image alt](https://github.com/monika-117/sophia-AI/blob/d703342b2a4f4ccfb0627d949dc04c920e618e72/output.png)
 
 
-## Schemantic Structure 
-![image alt](https://github.com/monika-117/sophia-AI/blob/d703342b2a4f4ccfb0627d949dc04c920e618e72/sophia%20daigram.png)
-
 ## Features
 
 * **Voice Activation:** Activate Sophia by saying "Sophia."
